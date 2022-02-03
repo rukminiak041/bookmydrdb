@@ -7,7 +7,7 @@ metadata:
   labels:
     app: "bookmydrdb"
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: "bookmydrdb"
@@ -18,12 +18,12 @@ spec:
     spec:
       containers:
       - name: "bookmydrdb-sha256-1"
-        image: "gcr.io/charged-ground-326209/github.com/rukminiak041/bookmydrdb@sha256:32d72d15855c38a7521531d891dfa98c75d9f7c3484949f5321f835dbde5fd2e"
+        image: "gcr.io/charged-ground-326209/github.com/rukminiak041/bookmydrdb@sha256:f93eeff95db3f88e176643491159ae0596e5db6cfd1454da8e5781f59e926a96"
 ---
 apiVersion: "autoscaling/v2beta1"
 kind: "HorizontalPodAutoscaler"
 metadata:
-  name: "bookmydrdb-hpa-tkez"
+  name: "bookmydrdb-hpa-9x0a"
   namespace: "default"
   labels:
     app: "bookmydrdb"
